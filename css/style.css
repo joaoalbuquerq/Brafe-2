@@ -6,13 +6,18 @@
     text-decoration: none;
     font-family: Georgia, serif;
     color: #252525;
+
+    /* CORES USADAS */
+
+    --black-light: #252525;
+    --brown-light: #d6d3c8;
 }
 
 /* HEADER */
 
 .header-info{
     font-size: .9em;
-    background: #d6d3c8;
+    background: var(--brown-light);
     padding: 5px 0;
     text-align: center;
     font-weight: bold;
@@ -22,5 +27,40 @@
     /* Sempre tratar as imagens como display block para que as margens possam
     ser somadas e centralizadas */
     display: block;
-    margin: 0 auto;
+    margin: 40px auto;
+}
+
+/* MENU */
+
+.header-menu{
+    border-bottom: 3px solid var(--brown-light);
+    border-top: 3px solid var(--brown-light);
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.header-menu li{
+    display: inline-block;
+}
+
+.header-menu li a{
+    display: block;
+    padding: 5px 10px 5px 0;
+    font-size: 1.125em;
+}
+
+.header-menu li a::before{
+    content: '•';
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.header-menu li:first-child a::before{
+    content: '';
+}
+
+.header-menu ul li a:hover{
+    border-bottom:1px solid var(--black-light);
 }
